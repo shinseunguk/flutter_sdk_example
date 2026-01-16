@@ -34,7 +34,7 @@ dependencies:
   # Calculator SDK package from git
   calculator_sdk:
     git:
-      url: https://github.com/anthropics/flutter_sdk_example.git
+      url: https://github.com/shinseunguk/flutter_sdk_example.git
       path: calculator_sdk
 
   # The following adds the Cupertino Icons font to your application.
