@@ -1,39 +1,44 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Calculator SDK
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+간단한 사칙연산 기능을 제공하는 Flutter 패키지입니다.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+## 설치
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+`pubspec.yaml`에 의존성을 추가합니다:
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+  calculator_sdk:
+    git:
+      url: https://github.com/shinseunguk/flutter_sdk_example.git
+      path: calculator_sdk
 ```
 
-## Additional information
+## 사용법
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+import 'package:calculator_sdk/calculator_sdk.dart';
+
+final calculator = Calculator();
+
+// 덧셈
+calculator.add(2, 3);       // 5.0
+
+// 뺄셈
+calculator.subtract(5, 3);  // 2.0
+
+// 곱셈
+calculator.multiply(3, 4);  // 12.0
+
+// 나눗셈
+calculator.divide(10, 2);   // 5.0
+```
+
+## API
+
+| 메서드 | 설명 |
+|--------|------|
+| `add(a, b)` | 두 수를 더합니다 |
+| `subtract(a, b)` | a에서 b를 뺍니다 |
+| `multiply(a, b)` | 두 수를 곱합니다 |
+| `divide(a, b)` | a를 b로 나눕니다 (0으로 나누면 `ArgumentError` 발생) |
